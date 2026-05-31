@@ -1,0 +1,70 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+PathNotFoundException: PathNotFoundException: Creation of temporary directory failed, path = 'C:\Users\USER\AppData\Local\Temp\flutter_tools.588543be\flutter_tools.' (OS Error: The system cannot find the path specified, errno = 3)
+
+```
+#0      _Directory.createTempSync (dart:io/directory_impl.dart:202:7)
+#1      ForwardingDirectory.createTempSync (package:file/src/forwarding/forwarding_directory.dart:28:21)
+#2      ErrorHandlingDirectory.createTempSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:420:27)
+#3      _runSync (package:flutter_tools/src/base/error_handling_io.dart:552:14)
+#4      ErrorHandlingDirectory.createTempSync (package:flutter_tools/src/base/error_handling_io.dart:419:12)
+#5      ResidentWebRunner._generateEntrypoint (package:flutter_tools/src/isolated/resident_web_runner.dart:713:73)
+#6      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:786:22)
+<asynchronous suspension>
+#7      ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:326:41)
+<asynchronous suspension>
+#8      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:108:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.38.6, on Microsoft Windows [Version 10.0.26200.8457], locale id-ID) [269ms]
+    [32m•[39m Flutter version 3.38.6 on channel stable at D:\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 8b87286849 (4 months ago), 2026-01-08 10:49:17 -0800
+    [32m•[39m Engine revision 78fc3012e4
+    [32m•[39m Dart version 3.10.7
+    [32m•[39m DevTools version 2.51.1
+    [32m•[39m Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop,
+      enable-android, enable-ios, cli-animations, enable-native-assets, omit-legacy-version-file,
+      enable-lldb-debugging
+
+[32m[✓][39m Windows Version (Windows 11 or higher, 25H2, 2009) [1.150ms]
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 36.1.0) [18,0s]
+    [32m•[39m Android SDK at D:\sdk
+    [32m•[39m Emulator version 36.3.10.0 (build_id 14472402) (CL:N/A)
+    [32m•[39m Platform android-36, build-tools 36.1.0
+    [32m•[39m Java binary at: D:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version OpenJDK Runtime Environment (build 21.0.8+-14196175-b1038.72)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web [10ms]
+    [32m•[39m Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[31m[✗][39m Visual Studio - develop Windows apps [9ms]
+    [31m✗[39m Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[32m[✓][39m Connected device (3 available) [177ms]
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.26200.8457]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 148.0.7778.168
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 148.0.3967.70
+
+[32m[✓][39m Network resources [1.333ms]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 1 category.
+```
